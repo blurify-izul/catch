@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
+use App\Helpers\Stream;
 
 class OrderController extends Controller
 {    
@@ -20,7 +21,7 @@ class OrderController extends Controller
     */
     public function index()
     {
-       
+       Stream::dataSync("https://s3-ap-southeast-2.amazonaws.com/catch-code-challenge/challenge-1-in.jsonl");
        return view('grid.gridOrder');
     }
 
