@@ -5,6 +5,7 @@ use Rs\JsonLines;
 use Illuminate\Http\Request;
 use App\Helpers\Stream;
 use App\ShippingAddress;
+use App\Geolocation;
 
 class HomeController extends Controller
 {
@@ -31,14 +32,13 @@ class HomeController extends Controller
 
     public function showMap($customerId) {
         $shippingAddress = ShippingAddress::find($customerId);
-        $url = "https://maps.googleapis.com/maps/api/geocode/json?address=".$shippingAddress->postcode."&key=AIzaSyBndZ6dcgB5okrA7U2CmaRhUmNvsYRgbOo&sensor=false";
-        $details = file_get_contents($url);
-        $result = json_decode($details,true);
+        $geolocation = Geolocation::where('postcode', $shippingAddress->postcode)->where('suburb',  $shippingAddress->suburb)->get();       
+        
         $lat = 0;
         $lon = 0;
-        if($result['status'] !== "ZERO_RESULTS") {
-            $lat = $result['results'][0]['geometry']['location']['lat'];
-            $lon = $result['results'][0]['geometry']['location']['lng'];
+        if($geolocation) {
+            $lat = $geolocation[0]->lat;
+            $lon = $geolocation[0]->lon;
         }
         return view('showMap', compact("shippingAddress", "lat", "lon")); 
     }
