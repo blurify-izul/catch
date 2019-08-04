@@ -14,13 +14,13 @@ Using Laravel 5.4 Framework, build with PHP 7.2.5.
   
 
 URL JSON (REST) :
-  - Customer Data : [site_url]/catch/api/customer
-  - Shipping Address Data : [site_url]/catch/api/shipping_address
-  - Product Data : [site_url]/catch/api/product
-  - Product Brand Data : [site_url]/catch/api/brand
+  - Customer Data : [site_url]/api/customer
+  - Shipping Address Data : [site_url]/api/shipping_address
+  - Product Data : [site_url]/api/product
+  - Product Brand Data : [site_url]/api/brand
 
 URL TO DOWNLOAD JSONL FILES :
-  - Customer Data : [site_url]/catch/api/customer/jsonln
-  - Shipping Address Data : [site_url]/catch/api/shipping_address/jsonln
-  - Product Data : [site_url]/catch/api/product/jsonln
-  - Product Brand Data : [site_url]/catch/api/brand/jsonln
+  - Customer Data : [site_url]/api/customer/jsonln
+  - Shipping Address Data : [site_url]/api/shipping_address/jsonln
+  - Product Data : [site_url]/api/product/jsonln
+  - Product Brand Data : [site_url]/api/brand/jsonln
