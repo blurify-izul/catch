@@ -8,7 +8,7 @@ http://saptawarna.com/catch/
 
 # Feature
 
-  - Sychronizing data from input file (https://s3-ap-southeast-2.amazonaws.com/catch-code-challenge/challenge-1-in.jsonl) every time access the landing page, to convert as json data using PHP Natively
+  - Synchronizing data from input file (https://s3-ap-southeast-2.amazonaws.com/catch-code-challenge/challenge-1-in.jsonl) every time access the landing page, to convert as json data using PHP Natively
   - Showing Order and enable to export to CSV with apropriate Format
   - Relation data with display menu for each data refference such a Customer, Shipping Address, Product, Product Brand 
   - Enabe to return as Json Format (REST)
@@ -27,3 +27,22 @@ URL TO DOWNLOAD JSONL FILES :
   - Shipping Address Data : [site_url]/api/shipping_address/jsonln
   - Product Data : [site_url]/api/product/jsonln
   - Product Brand Data : [site_url]/api/brand/jsonln
+  
+# Data Relation
+
+Please restore the sql dump file (catch.sql) for testing purpose  
+  
+# Input File Streaming
+
+To synchronize, use Helper/Stream,
+```
+App\Helpers\Stream
+```
+it called in the landing page like below 
+
+```
+Stream::dataSync("https://s3-ap-southeast-2.amazonaws.com/catch-code-challenge/challenge-1-in.jsonl");
+```
+
+this Helper use to saving data from input file and stored into table relations as well. 
+
