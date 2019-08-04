@@ -17,16 +17,16 @@ http://saptawarna.com/catch/
   
 
 URL JSON (REST) :
-  - Customer Data : [site_url]/api/customer
-  - Shipping Address Data : [site_url]/api/shipping_address
-  - Product Data : [site_url]/api/product
-  - Product Brand Data : [site_url]/api/brand
+  - Customer Data : [site_url]/api/customer, e.g: http://saptawarna.com/catch/api/customer
+  - Shipping Address Data : [site_url]/api/shipping_address, e.g: http://saptawarna.com/catch/api/shipping_address
+  - Product Data : [site_url]/api/product, e.g: http://saptawarna.com/catch/api/product
+  - Product Brand Data : [site_url]/api/brand, e.g: http://saptawarna.com/catch/api/brand
 
 URL TO DOWNLOAD JSONL FILES :
-  - Customer Data : [site_url]/api/customer/jsonln
-  - Shipping Address Data : [site_url]/api/shipping_address/jsonln
-  - Product Data : [site_url]/api/product/jsonln
-  - Product Brand Data : [site_url]/api/brand/jsonln
+  - Customer Data : [site_url]/api/customer/jsonln, e.g: http://saptawarna.com/catch/api/customer/jsonl
+  - Shipping Address Data : [site_url]/api/shipping_address/jsonln, e.g: http://saptawarna.com/catch/api/shipping_address/jsonl
+  - Product Data : [site_url]/api/product/jsonln, e.g: http://saptawarna.com/catch/api/product/jsonl
+  - Product Brand Data : [site_url]/api/brand/jsonln, e.g: http://saptawarna.com/catch/api/brand/jsonl
   
 # Data Relation
 
